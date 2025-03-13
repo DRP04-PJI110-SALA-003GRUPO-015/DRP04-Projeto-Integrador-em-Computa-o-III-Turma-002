@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 10px;
+            background-color: rgb(69, 168, 214);
+        }
+            #titulo{
+                text-align: center;
+                border-bottom: 2px solid;
+            }
+
+            img{
+                height: 100%;
+                border-radius: 200px;
+                width: 100%;
+               
+            }
+            #dados{
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                justify-content: flex-start;
+                width: 80%;
+                height: 80%;
+                padding-right: 10%;
+            }
+            main{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            #nome{
+                margin-left: 20px;
+                width: 200%;
+            }
+            #dado{
+                width: 200%;
+            }
+            #agenda{
+                background-color: white;
+                width: 80%;
+                height: 80%;
+                
+            }
+
+            
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="titulo">Bem-vindo!</h1>
+    </header>
+    <main>
+        <div id="dados">
+        <div><img src="img/perfil.jfif" alt="Foto perfil átomo"></div>
+        <div>
+            <h2 id="nome">Thaisa Soares Cata Preta</h2>
+            <p id="dado"><strong>Idade:</strong> 39 anos</p>
+            <p id="dado"><strong>Especialidade:</strong>Ciência dos materiais</p>
+        </div>
+    </div>
+    <div id="agenda">
+        <iframe src="https://calendar.google.com/calendar/embed?src=agendathaisascp%40gmail.com&ctz=America%2FSao_Paulo" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+    </div>
+    </main>
+    
+</body>
+</html>

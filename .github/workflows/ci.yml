@@ -1,0 +1,74 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_DATABASE: clinica_db_test
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_USER: clinica
+          MYSQL_PASSWORD: clinica
+        ports:
+          - 3306:3306
+        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.2'
+        extensions: mbstring, xml, ctype, iconv, intl, pdo_mysql, bcmath, zip
+        coverage: xdebug
+
+    - name: Install Dependencies
+      run: composer install --prefer-dist --no-progress
+
+    - name: Copy .env
+      run: cp .env.example .env.testing
+
+    - name: Generate key
+      run: php artisan key:generate --env=testing
+
+    - name: Directory Permissions
+      run: chmod -R 777 storage bootstrap/cache
+
+    - name: Create Database
+      run: |
+        mkdir -p database
+        touch database/database.sqlite
+        echo "DB_CONNECTION=sqlite" >> .env.testing
+
+    - name: Execute tests
+      run: vendor/bin/phpunit
+
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: sa-east-1
+
+    - name: Deploy to AWS
+      run: |
+        # Adicione aqui os comandos de deploy para AWS
+        echo "Deploying to AWS..." 

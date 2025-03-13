@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    
+    <title>Cadastro de Clientes</title>
+
+</head>
+<body>
+    <h1 id="Form">Formulário de cadastro de profissionais:</h1>
+    <form class="row g-3" action="usuario.php" method="post" enctype="multipart/form-data">
+        <div class="col-md-4">
+          <label for="validationDefault01" class="form-label">Nome</label>
+          <input type="text" class="form-control" id="validationDefault01" name="validationDefault01" placeholder="Nome" required>
+        </div>
+        <div class="col-md-4">
+          <label for="validationDefault02" class="form-label">Sobrenome</label>
+          <input type="text" class="form-control" id="validationDefault02" name="validationDefault02"placeholder="Sobrenome" required>
+        </div>
+        <div class="col-md-4">
+          <label for="validationDefaultUsername" class="form-label">E-mail</label>
+          <div class="input-group">
+            <span class="input-group-text" id="inputGroupPrepend2">@</span>
+            <input type="email" class="form-control" id="validationDefaultUsername" placeholder="modelo@provedor.com" name="validationDefaultUsername" aria-describedby="inputGroupPrepend2" required>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="validationDefault03" class="form-label">Data de Nascimento</label>
+          <input type="date" class="form-control" id="validationDefault03" name="validationDefault03" required>
+        </div>
+        <div class="col-md-4">
+            <label for="validationDefault04" class="form-label">Especialidade na área da saúde</label>
+            <input type="text" class="form-control" id="validationDefault04" name="validationDefault04" required>
+        </div>
+        <div class="col-md-4">
+          <label for="validationDefault05" class="form-label">Gênero</label>
+          <select class="form-select" id="validationDefault05" name="validationDefault05" required>
+            <option selected disabled value="">Escolha...</option>
+            <option>Mulher</option>
+            <option>Homem</option>
+            <option>Prefiro não informar</option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label for="validationDefault06" class="form-label">Cidade</label>
+          <input type="text" class="form-control" id="validationDefault06" name="validationDefault06" required>
+        </div>
+        <div class="col-md-4">
+          <label for="validationDefault07" class="form-label">Estado</label>
+          <input type="text" class="form-control" id="validationDefault07" name="validationDefault07" required>
+        </div>
+        <div class="col-md-4">
+            <label for="validationDefaultImage" class="form-label">Carregar Imagem</label>
+            <input type="file" class="form-control" id="validationDefaultImage" name="validationDefaultImage" aria-describedby="inputGroupPrepend2">
+        </div>
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+            <label class="form-check-label" for="invalidCheck2">
+              Concordo com os termos e condições
+            </label>
+          </div>
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-dark">Enviar Cadastro</button>
+        </div>
+      </form>
+</body>
+</html>

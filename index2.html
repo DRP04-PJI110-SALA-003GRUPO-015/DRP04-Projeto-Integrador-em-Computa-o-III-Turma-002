@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinica 24hrs</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div id="cabecalho">
+        <div id="logo">
+            <img src="/img/Logotipo Clínica Médica Azul e Laranja .png" alt="logotipo inicial">
+                <h1 id="logo1">Pronto atendimento</h1>
+        </div>
+        <nav id="main">
+            <ul>
+                <li id="conheca-nos"><a href="index1.html" id="decoration" >Conheça-nos
+                    <div class="tooltip">Mais detalhes sobre o Item Conheça-nos.</div>
+                </a>
+                </li>
+
+                <li><a href="index2.html" id="decoration" >Contato</a>
+                    <div class="tooltip">Mais detalhes sobre o Item Contato.</div>
+                </li>
+                                
+                
+                <li><a href="login.html" id="decoration">Login
+                    <div class="tooltip">Mais detalhes sobre o Item 3.</div></a>
+                </li>
+            </ul>        
+        </nav>    
+    </div>
+    <h2 class="cad">Cadastrar Usuario</h2>
+            <form id="form" action="usuario.php" method="POST">
+                <label id="label"for="nome">Nome:</label>
+                <input type="text"name="nome"placeholder="Digite seu nome">
+
+                <label id="label"for="cpf">CPF:</label>
+                <input type="text"name="cpf"placeholder="Digite seu CPF">
+
+                <label id="label"for="email">E-mail</label>
+                <input type="text"name="email"placeholder="Digite seu email">
+
+                <button type="submit">Cadastrar</button>
+
+            </form>
+    
+    </div>    
+    <a href="/index.html">Home</a>
+</body>
+</html>

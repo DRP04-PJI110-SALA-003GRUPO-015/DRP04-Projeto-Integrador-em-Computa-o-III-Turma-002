@@ -1,0 +1,365 @@
+/* Reset e Variáveis */
+:root {
+    --primary-color: #45A8D6;
+    --secondary-color: #09333A;
+    --text-color: #333;
+    --white: #fff;
+    --hover-color: #2C7DA0;
+    --error-color: #dc3545;
+    --success-color: #28a745;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--primary-color);
+}
+
+/* Header */
+#cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--white);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#logo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#logo1 {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* Navegação */
+#main {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+#decoration {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+#decoration:hover {
+    background-color: var(--hover-color);
+    color: var(--white);
+}
+
+/* Tooltips */
+.tooltip,
+.tooltip_login {
+    display: none;
+    position: absolute;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    width: 200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+li:hover .tooltip,
+li:hover .tooltip_login {
+    display: block;
+}
+
+/* Conteúdo Principal */
+.folder {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.textos {
+    flex: 1;
+}
+
+.folder_h1 {
+    color: var(--white);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.folder_texto {
+    color: var(--white);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+/* Galeria de Fotos */
+.fotos_nav {
+    display: flex;
+    gap: 2rem;
+    flex: 1;
+}
+
+.fotos_nav img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.fotos_nav img:hover {
+    transform: scale(1.05);
+}
+
+/* Serviços */
+.servicos {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    flex-wrap: wrap;
+}
+
+.servicos a {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    padding: 2rem;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.servicos a:hover {
+    transform: translateY(-5px);
+    background-color: var(--hover-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .folder {
+        flex-direction: column;
+    }
+
+    .fotos_nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #main {
+        display: none;
+        /* Será substituído por um menu mobile */
+    }
+
+    .servicos a {
+        min-width: 100%;
+    }
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.folder,
+.servicos {
+    animation: fadeIn 0.5s ease-in;
+}
+
+/* Mensagens de Feedback */
+.mensagem-sucesso {
+    background-color: var(--success-color);
+    color: var(--white);
+    padding: 1rem;
+    border-radius: 4px;
+    margin: 1rem 0;
+}
+
+.mensagem-erro {
+    background-color: var(--error-color);
+    color: var(--white);
+    padding: 1rem;
+    border-radius: 4px;
+    margin: 1rem 0;
+}
+
+/* Menu Mobile */
+.menu-mobile {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.menu-mobile span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--secondary-color);
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .menu-mobile {
+        display: block;
+    }
+
+    #main {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--white);
+        flex-direction: column;
+        padding: 1rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    #main.active {
+        display: flex;
+    }
+
+    #main li {
+        width: 100%;
+        text-align: center;
+        padding: 0.5rem 0;
+    }
+}
+
+/* Animações */
+.animate {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Validação de Formulários */
+.error {
+    border-color: var(--error-color) !important;
+}
+
+.error-message {
+    color: var(--error-color);
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+/* Loading States */
+.loading {
+    position: relative;
+    pointer-events: none;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid var(--primary-color);
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Tooltips Melhorados */
+.tooltip,
+.tooltip_login {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+li:hover .tooltip,
+li:hover .tooltip_login {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Melhorias de Acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Foco Visível */
+:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
