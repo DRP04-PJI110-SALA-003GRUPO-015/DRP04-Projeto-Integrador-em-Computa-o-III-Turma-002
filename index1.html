@@ -1,90 +1,100 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clinica 24hrs</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <meta name="description" content="Agenda Online - Agende suas consultas médicas de forma rápida e eficiente">
+    <title>Conheça-nos - Agenda Online</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-        <div id="cabecalho">
-            <div id="logo">
-                <img src="img/Logotipo Clínica Médica Azul e Laranja .png" alt="logotipo inicial">
-                <h1 id="logo1">Agenda de Atendimentos</h1>
-            </div>
-                <ul id="main">
-                    <li id="conheca-nos"><a href="index.html" id="decoration" target="_blank">Home
-                            <div class="tooltip">Mais detalhes sobre nossa Clinica.</div>
-                        </a>
-                    </li>
-
-                    <li><a href="index1.html" id="decoration" target="_blank">Conheça-nos</a>
-                        <div class="tooltip">Mais detalhes sobre o Item Contato.</div>
-                    </li>
-
-                    <li><a href="cadastro.html" id="decoration" target="_blank">Cadastrar</a>
-                        <div class="tooltip">Mais detalhes sobre o Item de Cadastro .</div>
-                    </li>
-
-                    <li><a href="login.html" id="decoration">Login
-                            <div class="tooltip_login">Mais detalhes sobre o Item 3.</div>
-                        </a>
-                    </li>
-                </ul>
+    <header id="cabecalho">
+        <div id="logo">
+            <img src="img/Logotipo Clínica Médica Azul e Laranja .png" alt="logotipo inicial">
+            <h1 id="logo1">Agenda de Atendimentos</h1>
         </div>
-
-        <div class="clinica">
-            <h1>Conheça a Clínica 24Hrs</h1>
-            <p>Cuidados de qualidade para sua saúde mental</p>
-        </div>
-        
-    
-        <!-- Sobre a Clínica -->
-        <section id="about">
-            <h2>Sobre a Clínica</h2>
-            <p>Nossa clínica oferece cuidados especializados em saúde mental, com foco em oferecer o suporte necessário para nossos pacientes viverem de maneira mais saudável e equilibrada.</p>
-            <p>Com uma equipe de profissionais altamente qualificados, estamos preparados para atender suas necessidades com ética, empatia e profissionalismo.</p>
-        </section>
-    
-        <!-- Equipe de Profissionais -->
-        <section id="team">
-            <h2>Nossa Equipe</h2>
-            <div class="team-member">
-                <img src="images/dr-ana.jpg" alt="Dra. Ana Silva - Psiquiatra">
-                <h3>Dra. Ana Silva</h3>
-                <p>Psiquiatra - Especialista em Transtornos de Ansiedade e Depressão</p>
-            </div>
-    
-            <div class="team-member">
-                <img src="images/dr-paulo.jpg" alt="Dr. Paulo Souza - Psicólogo">
-                <h3>Dr. Paulo Souza</h3>
-                <p>Psicólogo - Especialista em Terapia Cognitivo-Comportamental</p>
-            </div>
-        </section>
-    
-        <!-- Missão e Valores -->
-        <section id="mission">
-            <h2>Missão e Valores</h2>
-            <p>Nossa missão é proporcionar atendimento de qualidade, baseado em evidências científicas, promovendo o bem-estar e a saúde mental de nossos pacientes.</p>
-            <ul>
-                <li>Empatia</li>
-                <li>Comprometimento</li>
-                <li>Ética</li>
-                <li>Inovação</li>
+        <nav>
+            <ul id="main">
+                <li>
+                    <a href="index.html" id="decoration">
+                        <i class="fas fa-home"></i> Home
+                        <div class="tooltip">Página inicial da clínica</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="/index1.html" id="decoration">
+                        <i class="fas fa-info-circle"></i> Conheça-nos
+                        <div class="tooltip">Saiba mais sobre nossa clínica</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="cadastro.html" id="decoration">
+                        <i class="fas fa-user-plus"></i> Cadastrar
+                        <div class="tooltip">Crie sua conta agora</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="login.html" id="decoration">
+                        <i class="fas fa-sign-in-alt"></i> Login
+                        <div class="tooltip_login">Acesse sua conta</div>
+                    </a>
+                </li>
             </ul>
-        </section>
-    
-        <!-- Contato -->
-        <section id="contact">
-            <h2>Entre em Contato</h2>
-            <p>Telefone: (XX) XXXX-XXXX</p>
-            <p>Email: contato@clinica24hrs.com</p>
-            <p>Endereço: Rua da Saúde Mental, 123 - Cidade, Estado</p>
-        </section>
-    
-    </body>
-    </html>
+        </nav>
+    </header>
+
+    <div class="clinica">
+        <h1>Conheça a Clínica 24Hrs</h1>
+        <p>Cuidados de qualidade para sua saúde mental</p>
     </div>
     
+
+    <!-- Sobre a Clínica -->
+    <section id="about">
+        <h2>Sobre a Clínica</h2>
+        <p>Nossa clínica oferece cuidados especializados em saúde mental, com foco em oferecer o suporte necessário para nossos pacientes viverem de maneira mais saudável e equilibrada.</p>
+        <p>Com uma equipe de profissionais altamente qualificados, estamos preparados para atender suas necessidades com ética, empatia e profissionalismo.</p>
+    </section>
+
+    <!-- Equipe de Profissionais -->
+    <section id="team">
+        <h2>Nossa Equipe</h2>
+        <div class="team-member">
+            <img src="images/dr-ana.jpg" alt="Dra. Ana Silva - Psiquiatra">
+            <h3>Dra. Ana Silva</h3>
+            <p>Psiquiatra - Especialista em Transtornos de Ansiedade e Depressão</p>
+        </div>
+
+        <div class="team-member">
+            <img src="images/dr-paulo.jpg" alt="Dr. Paulo Souza - Psicólogo">
+            <h3>Dr. Paulo Souza</h3>
+            <p>Psicólogo - Especialista em Terapia Cognitivo-Comportamental</p>
+        </div>
+    </section>
+
+    <!-- Missão e Valores -->
+    <section id="mission">
+        <h2>Missão e Valores</h2>
+        <p>Nossa missão é proporcionar atendimento de qualidade, baseado em evidências científicas, promovendo o bem-estar e a saúde mental de nossos pacientes.</p>
+        <ul>
+            <li>Empatia</li>
+            <li>Comprometimento</li>
+            <li>Ética</li>
+            <li>Inovação</li>
+        </ul>
+    </section>
+
+    <!-- Contato -->
+    <section id="contact">
+        <h2>Entre em Contato</h2>
+        <p>Telefone: (XX) XXXX-XXXX</p>
+        <p>Email: contato@clinica24hrs.com</p>
+        <p>Endereço: Rua da Saúde Mental, 123 - Cidade, Estado</p>
+    </section>
+
 </body>
 </html>
